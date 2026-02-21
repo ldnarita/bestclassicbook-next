@@ -1,0 +1,5 @@
+[
+  { "slug": "jane-austen", "name": "Jane Austen", "bio": "English novelist known for social realism and wit.", "image": "/authors/jane-austen.jpg" },
+  { "slug": "herman-melville", "name": "Herman Melville", "bio": "American novelist best known for Moby-Dick.", "image": "/authors/herman-melville.jpg" },
+  { "slug": "charlotte-bronte", "name": "Charlotte Brontë", "bio": "English novelist; author of Jane Eyre.", "image": "/authors/charlotte-bronte.jpg" }
+]

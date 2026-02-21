@@ -1,0 +1,25 @@
+[
+  {
+    "slug": "best-classic-books-for-beginners",
+    "title": "Best Classic Books for Beginners",
+    "description": "Friendly entry points into classic literature—fast reads, clear plots, and huge cultural impact.",
+    "items": [
+      { "name": "Pride and Prejudice", "slug": "pride-and-prejudice" },
+      { "name": "The Great Gatsby", "slug": "the-great-gatsby" },
+      { "name": "Jane Eyre", "slug": "jane-eyre" },
+      { "name": "A Christmas Carol", "slug": "a-christmas-carol" },
+      { "name": "The Picture of Dorian Gray", "slug": "the-picture-of-dorian-gray" }
+    ]
+  },
+  {
+    "slug": "best-classic-books-about-love",
+    "title": "Best Classic Books About Love",
+    "description": "Romance, devotion, heartbreak, and social pressure—love stories that still feel alive.",
+    "items": [
+      { "name": "Pride and Prejudice", "slug": "pride-and-prejudice" },
+      { "name": "Wuthering Heights", "slug": "wuthering-heights" },
+      { "name": "Anna Karenina", "slug": "anna-karenina" },
+      { "name": "Jane Eyre", "slug": "jane-eyre" }
+    ]
+  }
+]
