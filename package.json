@@ -7,7 +7,9 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gen:summary": "node --loader ts-node/esm scripts/generateSummary.ts",
+    "opt:summaries": "node --loader ts-node/esm scripts/optimizeSummaries.ts"
   },
   "dependencies": {
     "gray-matter": "4.0.3",
@@ -23,6 +25,7 @@
     "@types/react-dom": "^19.0.0",
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.2.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.7.0"
   }
 }

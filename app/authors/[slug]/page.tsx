@@ -1,19 +1,31 @@
 import Image from "next/image";
-import { notFound } from "next/navigation";
-import { baseMetadata } from "@/lib/seo";
-import authors from "@/content/authors.json";
-import { listMarkdownDocs } from "@/lib/content";
 import Link from "next/link";
+import { notFound } from "next/navigation";
+
+import authors from "@/content/authors.json";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { baseMetadata } from "@/lib/seo";
+import { listMarkdownDocs } from "@/lib/content";
 import { breadcrumbJsonLd, articleJsonLd } from "@/lib/structuredData";
 
 type SummaryFrontmatter = {
-  title: string;
-  author: string;
-  description: string;
-  funbookshelfUrl: string;
+  title?: string;
+  author?: string;
+  description?: string;
+  funbookshelfUrl?: string;
 };
+
+// Normalizes "Charlotte Brontë" vs "Charlotte Bronte", spacing, punctuation
+function normName(x: string) {
+  return (x ?? "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
 export async function generateStaticParams() {
   return authors.map((a) => ({ slug: a.slug }));
@@ -37,7 +49,13 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
   if (!author) return notFound();
 
   const allSummaries = await listMarkdownDocs<SummaryFrontmatter>("content/summaries");
-  const authorSummaries = allSummaries.filter((s) => s.frontmatter.author.toLowerCase() === author.name.toLowerCase());
+
+  const authorKey = normName(author.name);
+
+  const authorSummaries = allSummaries.filter((s) => {
+    const a = normName(s.frontmatter?.author ?? "");
+    return a === authorKey;
+  });
 
   const crumbs = [
     { name: "Home", path: "/" },
@@ -75,7 +93,9 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
           style={{ borderRadius: 18, border: "1px solid var(--border)" }}
         />
         <div>
-          <h1 className="h1" style={{ marginBottom: 6 }}>{author.name}</h1>
+          <h1 className="h1" style={{ marginBottom: 6 }}>
+            {author.name}
+          </h1>
           <p className="p">{author.bio}</p>
         </div>
       </div>
@@ -83,13 +103,14 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
       <hr className="sep" />
 
       <h2 className="h2">Summaries</h2>
+
       {authorSummaries.length === 0 ? (
         <p className="p">No summaries published yet for this author.</p>
       ) : (
         <ul className="p">
           {authorSummaries.map((s) => (
             <li key={s.slug}>
-              <Link href={`/summaries/${s.slug}`}>{s.frontmatter.title}</Link>
+              <Link href={`/summaries/${s.slug}`}>{s.frontmatter?.title ?? s.slug}</Link>
             </li>
           ))}
         </ul>
