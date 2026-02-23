@@ -62,7 +62,7 @@ export default async function SummariesIndex() {
     <div>
       <h1 className="h1">Summaries</h1>
       <p className="p">
-        Short, modern summaries with a clean path to read the full text on FunBookShelf.
+        Short, modern summaries with a clean path to the full public domain text when you’re ready to read.
       </p>
 
       <hr className="sep" />

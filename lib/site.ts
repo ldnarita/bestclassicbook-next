@@ -1,20 +1,18 @@
-export const SITE = {
+﻿export const SITE = {
   name: "Best Classic Book",
-  domain: "bestclassicbook.com",
   url: "https://bestclassicbook.com",
-  description:
-    "Modern, trustworthy summaries and ranked lists of public domain classic books. Read full texts on FunBookShelf.com.",
-  socials: {
-    x: "https://x.com/",
-    github: "https://github.com/"
-  },
-  funnelTarget: {
-    name: "FunBookShelf",
-    url: "https://funbookshelf.com"
-  }
-} as const;
+  description: "Classic book summaries, ranked lists, author guides, and curated recommendations."
+};
 
+// Where the full public domain texts live
+export const FULL_TEXT_BASE_URL = "https://funbookshelf.com";
+
+/**
+ * Convert a path ("/summaries/a-book") or absolute URL into an absolute URL.
+ */
 export function absUrl(path: string) {
-  if (!path.startsWith("/")) path = `/${path}`;
-  return `${SITE.url}${path}`;
+  if (!path) return SITE.url;
+  if (path.startsWith("http://") || path.startsWith("https://")) return path;
+  const clean = path.startsWith("/") ? path : `/${path}`;
+  return `${SITE.url}${clean}`;
 }

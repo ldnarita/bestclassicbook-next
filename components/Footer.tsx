@@ -1,16 +1,17 @@
-import { SITE } from "@/lib/site";
+﻿import Link from "next/link";
+import { FULL_TEXT_BASE_URL } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="container" style={{ paddingBottom: 40 }}>
-      <div className="card">
-        <div className="badge">© {new Date().getFullYear()} {SITE.name}</div>
-        <p className="p" style={{ marginTop: 10 }}>
-          Looking for full public domain texts? Read on{" "}
-          <a href={SITE.funnelTarget.url} rel="noopener noreferrer">
-            {SITE.funnelTarget.name}
-          </a>.
-        </p>
+    <footer className="siteFooter">
+      <div className="container">
+        <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+          <span>© {new Date().getFullYear()} Best Classic Book</span>
+          <span className="muted">•</span>
+          <a className="muted" href={FULL_TEXT_BASE_URL} rel="noopener noreferrer">
+            Read the complete novel online →
+          </a>
+        </div>
       </div>
     </footer>
   );
