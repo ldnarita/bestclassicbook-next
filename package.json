@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "gen:summary": "node --loader ts-node/esm scripts/generateSummary.ts",
-    "opt:summaries": "node --loader ts-node/esm scripts/optimizeSummaries.ts"
+    "opt:summaries": "node --loader ts-node/esm scripts/optimizeSummaries.ts",
+    "repair:summaries": "node --loader ts-node/esm scripts/repairSummaryFrontmatter.ts"
   },
   "dependencies": {
     "gray-matter": "4.0.3",
