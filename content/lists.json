@@ -1,25 +1,68 @@
 [
   {
-    "slug": "best-classic-books-for-beginners",
-    "title": "Best Classic Books for Beginners",
-    "description": "Friendly entry points into classic literature—fast reads, clear plots, and huge cultural impact.",
+    "slug": "best-romance-and-social-comedy-classics",
+    "title": "Romance & Social Comedy Classics",
+    "description": "Witty love stories, social pressure, and sharp character comedy—perfect for readers who want romance with brains.",
     "items": [
       { "name": "Pride and Prejudice", "slug": "pride-and-prejudice" },
-      { "name": "The Great Gatsby", "slug": "the-great-gatsby" },
       { "name": "Jane Eyre", "slug": "jane-eyre" },
-      { "name": "A Christmas Carol", "slug": "a-christmas-carol" },
-      { "name": "The Picture of Dorian Gray", "slug": "the-picture-of-dorian-gray" }
+      { "name": "Wuthering Heights", "slug": "wuthering-heights" }
     ]
   },
   {
-    "slug": "best-classic-books-about-love",
-    "title": "Best Classic Books About Love",
-    "description": "Romance, devotion, heartbreak, and social pressure—love stories that still feel alive.",
+    "slug": "best-literary-fiction-and-drama-classics",
+    "title": "Literary Fiction & Drama Classics",
+    "description": "Character-driven classics with big themes—identity, morality, society, ambition, and what people hide from each other.",
     "items": [
-      { "name": "Pride and Prejudice", "slug": "pride-and-prejudice" },
-      { "name": "Wuthering Heights", "slug": "wuthering-heights" },
-      { "name": "Anna Karenina", "slug": "anna-karenina" },
-      { "name": "Jane Eyre", "slug": "jane-eyre" }
+      { "name": "The Great Gatsby", "slug": "the-great-gatsby" },
+      { "name": "The Picture of Dorian Gray", "slug": "the-picture-of-dorian-gray" },
+      { "name": "Little Women", "slug": "little-women" },
+      { "name": "Anna Karenina", "slug": "anna-karenina" }
+    ]
+  },
+  {
+    "slug": "best-adventure-and-thriller-classics",
+    "title": "Adventure & Thriller Classics",
+    "description": "Revenge, treasure hunts, escapes, danger, and big plot momentum—classic page-turners that still fly.",
+    "items": [
+      { "name": "The Count of Monte Cristo", "slug": "the-count-of-monte-cristo" },
+      { "name": "Treasure Island", "slug": "treasure-island" },
+      { "name": "The Adventures of Tom Sawyer", "slug": "the-adventures-of-tom-sawyer" }
+    ]
+  },
+  {
+    "slug": "best-horror-and-gothic-classics",
+    "title": "Horror & Gothic Classics",
+    "description": "Dark atmospheres, psychological dread, monsters, and haunting ideas—essential gothic classics and horror foundations.",
+    "items": [
+      { "name": "Dracula", "slug": "dracula" },
+      { "name": "Frankenstein", "slug": "frankenstein" },
+      { "name": "The Yellow Wallpaper", "slug": "the-yellow-wallpaper" }
+    ]
+  },
+  {
+    "slug": "best-mystery-classics",
+    "title": "Mystery Classics",
+    "description": "Detective fiction that defined the genre—clever cases, sharp deductions, and endlessly rereadable mysteries.",
+    "items": [
+      { "name": "The Adventures of Sherlock Holmes", "slug": "the-adventures-of-sherlock-holmes" }
+    ]
+  },
+  {
+    "slug": "best-science-fiction-classics",
+    "title": "Science Fiction Classics",
+    "description": "Time travel, other worlds, and thought experiments—early science fiction classics that shaped modern sci-fi.",
+    "items": [
+      { "name": "The Time Machine", "slug": "the-time-machine" },
+      { "name": "A Princess of Mars", "slug": "a-princess-of-mars" }
+    ]
+  },
+  {
+    "slug": "best-psychological-fiction-classics",
+    "title": "Psychological Fiction Classics",
+    "description": "Guilt, obsession, moral pressure, and inner conflict—classics where the biggest battle happens inside the mind.",
+    "items": [
+      { "name": "Crime and Punishment", "slug": "crime-and-punishment" }
     ]
   }
 ]

@@ -11,7 +11,8 @@
     "gen:summary": "node --loader ts-node/esm scripts/generateSummary.ts",
     "opt:summaries": "node --loader ts-node/esm scripts/optimizeSummaries.ts",
     "repair:summaries": "node --loader ts-node/esm scripts/repairSummaryFrontmatter.ts",
-    "fix:frontmatter": "node --loader ts-node/esm scripts/fixFrontmatter.ts"
+    "fix:frontmatter": "node --loader ts-node/esm scripts/fixFrontmatter.ts",
+    "scaffold:summaries": "node --loader ts-node/esm scripts/scaffoldMissingSummaries.ts"
   },
   "dependencies": {
     "gray-matter": "4.0.3",

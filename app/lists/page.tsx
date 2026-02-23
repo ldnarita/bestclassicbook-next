@@ -1,28 +1,58 @@
 import Link from "next/link";
 import lists from "@/content/lists.json";
 import { baseMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbJsonLd, itemListJsonLd } from "@/lib/structuredData";
+
+type ListDef = (typeof lists)[number];
 
 export const metadata = baseMetadata({
-  title: "Classic Book Lists | Best Classic Book",
-  description: "Browse ranked lists of classic books and curated reading guides."
+  title: "Top Classic Book Lists | Best Classic Book",
+  description: "Browse curated, ranked lists of classic books by genre and reader intent."
 });
 
-export default function ListsIndexPage() {
+export default function ListsIndex() {
+  const breadcrumb = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Lists", path: "/lists" }
+  ]);
+
+  const itemList = itemListJsonLd({
+    name: "Top Classic Book Lists",
+    description: "Curated classic reading lists by genre and search intent.",
+    path: "/lists",
+    items: (lists as ListDef[]).map((l) => ({
+      name: l.title,
+      path: `/lists/${l.slug}`
+    }))
+  });
+
   return (
-    <div className="card">
-      <h1>Lists</h1>
-      <p className="muted">Curated classic book lists built for discovery.</p>
+    <article className="card">
+      <JsonLd data={[breadcrumb, itemList]} />
 
-      <hr style={{ border: "none", borderTop: "1px solid var(--border)", margin: "18px 0" }} />
+      <h1 className="h1">Top Classic Book Lists</h1>
+      <p className="p">
+        Explore classic book lists built around real search intent: romance, adventure, horror, mystery, science fiction, and more.
+      </p>
 
-      <ul>
-        {lists.map((l) => (
-          <li key={l.slug} style={{ margin: "10px 0" }}>
-            <Link href={`/lists/${l.slug}`}>{l.title}</Link>
-            <div className="muted">{l.description}</div>
-          </li>
+      <hr className="sep" />
+
+      <div className="grid">
+        {(lists as ListDef[]).map((l) => (
+          <div className="col-6" key={l.slug}>
+            <div className="card">
+              <h2 className="h2" style={{ marginTop: 0 }}>
+                <Link href={`/lists/${l.slug}`}>{l.title}</Link>
+              </h2>
+              <p className="p muted" style={{ marginTop: 8 }}>{l.description}</p>
+              <div style={{ marginTop: 12 }}>
+                <Link className="badge" href={`/lists/${l.slug}`}>View list →</Link>
+              </div>
+            </div>
+          </div>
         ))}
-      </ul>
-    </div>
+      </div>
+    </article>
   );
 }
