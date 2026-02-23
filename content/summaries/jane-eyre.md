@@ -1,42 +1,36 @@
-# Jane Eyre Summary (Plot, Themes & Analysis)
-
-Looking for a clear and spoiler-light Jane Eyre summary? This guide covers the plot, main characters, key themes, and the deeper meaning of this classic, so you can understand the story fast.
-
 ---
 title: "Jane Eyre"
-author: "Charlotte Brontë"
-description: "A resilient heroine fights for dignity and independence while navigating love, morality, and a haunting secret."
-readingTime: "9 min read"
-year: 1847
-coverImage: "/books/jane-eyre.jpg"
-funbookshelfUrl: "https://funbookshelf.com/books/jane-eyre"
+author: "Unknown Author"
+description: "Summary coming soon."
+readingTime: "5 min read"
 ---
 
-## Jane Eyre Plot Summary
-Jane grows up orphaned and mistreated, but refuses to accept humiliation as her destiny. As an adult, she becomes governess at Thornfield Hall, where she meets the intense and enigmatic Mr. Rochester.
+# Jane Eyre Summary (Plot, Themes & Analysis)
+
+Looking for a clear, fast **Jane Eyre** summary? This guide breaks down the plot, main themes, and key ideas of Unknown Author's classic in a spoiler-light, easy-to-read format.
 
 ## Jane Eyre Plot Summary
-Jane and Rochester develop a bond built on honesty and emotional recognition. But Thornfield has an unsettling atmosphere—strange sounds, unexplained events, and a mystery that threatens Jane’s sense of right and wrong.
+A short summary of what unfolds—and why it matters—without getting bogged down in details.
+
+## Jane Eyre Plot Summary
+A short summary of what unfolds—and what the story suggests about people, society, or human nature—without getting bogged down in details.
 
 ## Key Themes in Jane Eyre
-- Self-respect and moral independence  
-- Love vs. compromise  
-- Power, class, and gender expectations  
-- Faith, identity, and personal boundaries  
+- Identity and self-discovery
+- Power, authority, and rules
+- Choice, consequence, and responsibility
+- The gap between appearance and reality
 
 ## Why Jane Eyre Still Matters
-If you like strong character voice, gothic mood, and a romance that refuses to sacrifice integrity, start here.
-
----
+Ideal if you want a fast, clear classic with a strong message and plenty to think about.
 
 ## Frequently Asked Questions About Jane Eyre
 
-### What is Jane Eyre about?
-Jane Eyre is a classic story that follows the main characters through a central conflict that reveals bigger ideas about society, human nature, or morality.
+**What is Jane Eyre about?**
+Jane Eyre follows a central journey that tests the main character and reveals deeper ideas beneath the story—without needing a difficult, academic read.
 
-### What are the main themes in Jane Eyre?
-Common themes include identity, power, love, ambition, responsibility, and the consequences of choices—depending on the lens you read it through.
+**What are the main themes in Jane Eyre?**
+The biggest themes usually include identity, power and rules, social pressure, and how choices shape outcomes—depending on how you interpret key scenes.
 
-### Is Jane Eyre hard to read?
-Most readers find it manageable with a good summary and context. If the language feels old-fashioned, try reading in short sections and focusing on the big plot moves and themes.
-
+**Is Jane Eyre a difficult read?**
+Not usually. The language can feel older, but the plot is easy to follow with a quick summary and a few notes on the themes.

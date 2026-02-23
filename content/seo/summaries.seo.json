@@ -1,0 +1,27 @@
+{
+  "alice-in-wonderland": {
+    "primaryKeyword": "Alice in Wonderland summary",
+    "secondaryKeywords": ["plot summary", "themes", "analysis"],
+    "themes": [
+      "Identity and growing up",
+      "Logic vs. nonsense",
+      "Authority and absurd power",
+      "Curiosity and imagination",
+      "Rules that keep changing"
+    ],
+    "faq": [
+      {
+        "q": "What is Alice in Wonderland about?",
+        "a": "Alice in Wonderland follows Alice as she falls into a bizarre world where logic breaks down and identity shifts, turning her journey into a playful but pointed look at growing up and authority."
+      },
+      {
+        "q": "What are the main themes in Alice in Wonderland?",
+        "a": "Major themes include identity, absurd authority, the instability of rules and language, and the tension between logic and nonsense."
+      },
+      {
+        "q": "Is Alice in Wonderland a difficult read?",
+        "a": "Not usually. It’s short and episodic, though the wordplay can be tricky—reading with a summary makes it much easier."
+      }
+    ]
+  }
+}
