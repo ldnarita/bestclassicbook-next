@@ -1,8 +1,10 @@
 ---
 title: "Dracula"
-author: "Unknown Author"
-description: "Summary coming soon."
-readingTime: "5 min read"
+author: "Bram Stoker"
+description: "A Gothic horror novel that defines the modern vampire archetype"
+readingTime: "~160,000 words, 10–12 hours read"
+year: 1897
+funbookshelfUrl: "https://funbookshelf.com/books/dracula"
 ---
 
 # Dracula Summary (Plot, Themes & Analysis)
