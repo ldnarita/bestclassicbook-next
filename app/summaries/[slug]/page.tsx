@@ -13,7 +13,7 @@ type SummaryFrontmatter = {
   readingTime: string;
   year?: number;
   coverImage?: string; // "/books/xxx.jpg"
-  funbookshelfUrl: string;
+  funbookshelfUrl?: string;
 };
 
 export async function generateStaticParams() {
@@ -53,6 +53,8 @@ export default async function SummaryPage({ params }: { params: Promise<{ slug: 
     imagePath: doc.frontmatter.coverImage
   });
 
+  const fullTextUrl = doc.frontmatter.funbookshelfUrl?.trim();
+
   return (
     <article className="card">
       <Breadcrumbs
@@ -66,6 +68,7 @@ export default async function SummaryPage({ params }: { params: Promise<{ slug: 
       <JsonLd data={[breadcrumbLd, bookLd]} />
 
       <h1 className="h1">{doc.frontmatter.title}</h1>
+
       <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
         <span className="badge">{doc.frontmatter.author}</span>
         <span className="badge">{doc.frontmatter.readingTime}</span>
@@ -87,18 +90,39 @@ export default async function SummaryPage({ params }: { params: Promise<{ slug: 
 
       <hr className="sep" />
 
-      <p className="p" style={{ fontSize: 16 }}>{doc.frontmatter.description}</p>
+      <p className="p" style={{ fontSize: 16 }}>
+        {doc.frontmatter.description}
+      </p>
 
-      <div className="prose" style={{ marginTop: 14 }}
+      <div
+        className="prose"
+        style={{ marginTop: 14 }}
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: doc.html }}
       />
 
+      {/* UPDATED CTA */}
       <hr className="sep" />
 
-      <a className="badge" href={doc.frontmatter.funbookshelfUrl} rel="noopener noreferrer">
-        Read the full text on FunBookShelf →
-      </a>
+      <section aria-label="Read the complete novel online">
+        <h2 className="h2" style={{ marginBottom: 8 }}>
+          Read the Complete Novel Online
+        </h2>
+
+        <p className="p muted" style={{ marginTop: 0 }}>
+          Access a trusted edition of the <strong>full public domain text</strong>.
+        </p>
+
+        {fullTextUrl ? (
+          <a className="badge" href={fullTextUrl} rel="noopener noreferrer">
+            Full public domain text →
+          </a>
+        ) : (
+          <p className="p muted">
+            Full text link coming soon.
+          </p>
+        )}
+      </section>
     </article>
   );
 }
